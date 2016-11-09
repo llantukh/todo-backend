@@ -1,5 +1,7 @@
 'use strict'
 
+const TodoList = use('app/Model/Todolist.js')
+
 class TodoListController {
 
   * example (request, response) {
