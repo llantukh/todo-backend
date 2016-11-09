@@ -23,15 +23,13 @@ Route.on('/').render('welcome')
 //Routes for users table
 Route.post('/users', 'UserController.create')
 Route.get('/users/:id', 'UserController.show')
-Route.delete('/users/:id, UserController.delete')
 
 //Routes for todo_lists table
 Route.post('/users/:id/todo-lists', 'TodoListController.create')
 Route.get('/users/:id/todo-lists', 'TodoListController.index')
 
 //Routes for tasks table
-Route.post('/users/:id/todo-lists/:id/tasks', 'TaskController.create')
-Route.get('/users/:id/todo-lists/:id/tasks', 'TaskController.index')
-Route.get('/users/:id/todo-lists/:id/tasks/:id', 'TaskController.show')
-Route.put('/users/:id/todo-lists/:id/tasks/:id', 'TaskController.update')
-Route.delete('/users/:id/todo-lists/:id/tasks/:id', 'TaskController.delete')
+Route.post('/users/:user_id/todo-lists/:list_id/tasks', 'TaskController.create')
+Route.get('/users/:user_id/todo-lists/:list_id/tasks', 'TaskController.index')
+Route.get('/users/:user_id/todo-lists/:list_id/tasks/:task_id', 'TaskController.show')
+Route.put('/users/:user_id/todo-lists/:list_id/tasks/:task_id', 'TaskController.update')
