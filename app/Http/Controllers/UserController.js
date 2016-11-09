@@ -23,8 +23,6 @@ class UserController {
       response.json({ error: "No such user" })
     }
   }
-
-
 }
 
 module.exports = UserController
