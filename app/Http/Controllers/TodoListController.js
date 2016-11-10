@@ -1,12 +1,12 @@
 'use strict'
 
-const TodoList = use('app/Model/Todolist.js')
+const TodoList = use('App/Model/Todolist')
 
 class TodoListController {
 
   * create (request, response) {
     let userId = request.param('id')
-    let data = request.only('name')
+    let data = request.only('list_name')
     data.user_id = userId
 
     let todoList = yield TodoList.create(data)

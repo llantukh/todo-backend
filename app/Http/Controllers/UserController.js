@@ -1,6 +1,6 @@
 'use strict'
 
-const User = use('app/Model/User.js')
+const User = use('App/Model/User')
 
 
 class UserController {
